@@ -1,0 +1,119 @@
+/* Styles used in the body */
+body{
+    margin: 0;
+    background-color:  hsl(204, 43%, 93%);
+    padding: 3rem 1.5rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.overall{
+    box-shadow: 0 0 2rem 0.05rem hsl(0, 0%, 80%);
+}
+
+/*styles used in the top div */
+.top{
+    background-color: hsl(0, 0%, 100%);   
+    padding: 0.4rem 1.5rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.top-header{    
+    font-size: 1.22rem; 
+    font-weight: 700;
+    margin: 1.5rem 0;
+    color: hsl(179, 62%, 43%);
+}
+
+.sub-header{
+    font-size: 0.90rem;
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+    margin: 1rem 0;
+    line-height: 1.3;    
+}
+
+.explanatory{
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: hsl(218, 22%, 67%);
+    line-height: 2;  
+    margin-bottom: 1.5rem;
+}
+
+/* Styles that are common between .middle and .bottom*/
+.middle-and-bottom-header{
+    font-size: 1.15rem; 
+    font-weight: 700;
+    margin: 1.2rem 0 1rem;
+    color:hsl(0, 0%, 100%);
+}
+
+/* Styles used in the middle div */
+.middle{
+    background-color: hsl(179, 62%, 43%);
+    padding: 0.5rem 1.5rem;
+}
+
+.price{
+    font-size:2rem;
+    font-weight: 700;
+    color:hsl(0, 0%, 100%); 
+    background-color: hsl(179, 62%, 43%);  
+    vertical-align: middle; 
+    margin-right: .6rem;
+}
+
+.price-text{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(179, 47%, 70%);    
+    vertical-align: middle;
+}
+
+.price-clarification{
+    font-size: 1rem;
+    font-weight: 400;
+    color:hsl(179, 47%, 85%);
+    margin: .5rem 0;
+}
+
+.btn {
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%); ;
+    font-size: 1rem;
+    background:  hsl(71, 73%, 54%);
+    text-decoration: none;
+    border: none;  
+    width: 100%; 
+    padding: 1rem;   
+    font-family: 'Karla', sans-serif;
+    margin: 1.2rem 0 1rem;
+  }
+  
+
+/* Styles used in the bottom div */
+.bottom{
+    background-color: hsl(179, 47%, 52%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 5px 5px;
+}
+
+.lst{
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    color: hsl(179, 47%, 85%);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-size:1rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 2rem 0 1rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
