@@ -1,143 +1,89 @@
-/* Styles used in the body */
-body{
-    margin: 0;
-    background-color:  hsl(204, 43%, 93%);
-    padding: 3rem 1.5rem;
-    font-family: 'Karla', sans-serif;
-}
-@media screen and (min-width: 600px){
-    body{
-        padding: 0;               
-    }
+* {
+    margin: 0;   
 }
 
-.overall{
-    box-shadow: 0 0 2rem 0.05rem hsl(0, 0%, 80%);
-}
-@media screen and (min-width: 600px){
-    .overall{
-        width: 44%;
-        height: 59%;
-        position:absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
+body, button {
+    font-family: 'Karla', sans-serif; 
 }
 
-/*styles used in the top div */
-.top{
-    background-color: hsl(0, 0%, 100%);   
-    padding: 0.4rem 1.5rem;
-    border-radius: 5px 5px 0 0;
-}
-@media screen and (min-width: 600px){
-    .top{
-        border-radius: 10px 10px 0 0;
-        height: 46%;
-        padding: 3% 6% 0;
-        overflow: hidden;
-    }
+main {
+    background-color: hsl(204, 43%, 93%);
+    padding: 4rem 1.7rem;
 }
 
-.top-header{    
-    font-size: 1.5rem; 
+.container{
+    box-shadow: 0 0 0.5rem 0.05rem hsl(0, 0%, 85%);    
+}
+
+/* Upper section styles */
+
+.intro {
+    background-color: hsl(0, 0%, 100%);    
+    border-radius: 0.3rem 0.3rem 0 0;
+    padding: 2rem 1.6rem;
+}
+
+.intro > h1 {
+    font-size: 1.2rem;
     font-weight: 700;
-    margin: 1.5rem 0;
     color: hsl(179, 62%, 43%);
 }
-@media screen and (min-width: 600px){
-    .top-header{
-        font-size: 2rem;        
-    }
-}
 
-.sub-header{
-    font-size: 0.90rem;
+.intro > h2 {
+    font-size: 0.9rem;
     font-weight: 700;
     color: hsl(71, 73%, 54%);
-    margin: 1rem 0;
-    line-height: 1.3;    
-}
-@media screen and (min-width: 600px){
-    .sub-header{
-        font-size: 1.5rem;
-        margin: 2rem 0 0.5rem;
-    }
+    margin: 1.5rem 0;
 }
 
-.explanatory{
+.intro > p {
     font-size: 0.85rem;
     font-weight: 400;
-    color: hsl(218, 22%, 67%);
-    line-height: 2;  
-    margin-bottom: 1.5rem;
-}
-@media screen and (min-width: 600px){
-    .explanatory{
-        font-size: 1.4rem;
-        margin: 0;
-        line-height: 1.5;
-       
-    }
+    color: hsl(218, 22%, 75%);
+    line-height: 1.75;
 }
 
-/* Styles that are common between .middle and .bottom*/
-.middle-and-bottom-header{
-    font-size: 1.15rem; 
-    font-weight: 700;
-    margin: 1.2rem 0 1rem;
-    color:hsl(0, 0%, 100%);
-}
-@media screen and (min-width: 600px){
-    .middle-and-bottom-header{
-        font-size: 1.4rem;   
-        margin: 1.5rem 0 1rem;     
-    }
+/* Middle and Lower section common styles */
+
+.pricing, .why{
+    padding: 1.6rem 1.6rem;
 }
 
-/* Styles used in the middle div */
-.middle{
+.pricing > h1, .why > h1 {
+    font-size: 1.15rem;
+    font-weight: 700; 
+    color: hsl(0, 0%, 100%); 
+    margin-bottom: 1rem; 
+}
+
+/* Middle Section */
+
+.pricing, .pricing > mark{
     background-color: hsl(179, 62%, 43%);
-    padding: 0.5rem 1.5rem;
- 
-}
-@media screen and (min-width: 600px){
-    .middle{
-        width: 40%;
-        float: left;
-        padding: 2% 5% 0;
-        height: 50%;
-        border-radius: 0 0 0 5px;
-        overflow:hidden;
-    }
 }
 
-.price{
+.pricing > mark {
     font-size:2rem;
     font-weight: 700;
-    color:hsl(0, 0%, 100%); 
-    background-color: hsl(179, 62%, 43%);  
-    vertical-align: middle; 
-    margin-right: .6rem;
+    color:hsl(0, 0%, 100%);    
+    vertical-align: middle;     
 }
 
-.price-text{
-    margin: 0;
+.pricing > span {
     font-size: 1rem;
     font-weight: 400;
-    color: hsl(179, 47%, 70%);    
-    vertical-align: middle;
+    color: hsl(179, 47%, 70%);  
+    margin: 0 0.6rem;     
 }
 
-.price-clarification{
+.pricing > p {
     font-size: 1rem;
     font-weight: 400;
     color:hsl(179, 47%, 85%);
-    margin: .5rem 0;
+    margin: 1rem 0 1.5rem;
 }
 
-.btn {
+.pricing > button {
     -webkit-border-radius: 5;
     -moz-border-radius: 5;
     border-radius: 5px;
@@ -146,60 +92,110 @@ body{
     background:  hsl(71, 73%, 54%);
     text-decoration: none;
     border: none;  
-    width: 100%; 
-    padding: 1rem;   
-    font-family: 'Karla', sans-serif;
-    margin: 1.2rem 0 1rem;
-  }
-  @media screen and (min-width: 600px){
-    .btn{
-        margin: 2.5rem 0 0;
-    }
+    width: 100%;
+    padding: 1rem; 
+    box-shadow: 0 0 0.5rem 0.05rem hsl(179, 47%, 40%);    
+    cursor: pointer;
 }
 
-/* Styles used in the bottom div */
-.bottom{
+.pricing button:hover{
+    background: hsl(71, 87%, 44%);
+}
+
+/* Lower Section */
+
+.why{
     background-color: hsl(179, 47%, 52%);
-    padding: 0.5rem 1.5rem;
-    border-radius: 0 0 5px 5px;
-}
-@media screen and (min-width: 600px){
-    .bottom{
-        width: 40%; 
-        float: right;
-        padding: 2% 5% 0;
-        height: 50%;
-        border-radius: 0 0 5px 0;
-        overflow:hidden;
-    }
+    border-radius: 0 0 0.3rem 0.3rem;
 }
 
-.lst{
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+.why > ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
     color: hsl(179, 47%, 85%);
     line-height: 1.5;
     margin-bottom: 1.5rem;
-    font-size:1rem;
+    font-size:1rem
 }
 
-.clear{
-    clear: both;
+footer{
+    text-align: center;
+    font-size: 0.75rem;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-    margin: 2rem 0 1rem;
-}
-@media screen and (min-width: 600px){
-    .attribution{
-       position: absolute;
-       bottom: 2.5%;
-       left: 50%;
-       transform: translate(-50%, 0);
+@media (min-width: 950px)
+{   
+    body{
+        height: 100vh;
+        display:flex;
+        flex-flow: column wrap;
     }
 
+    main { 
+        flex: 90 1 auto; 
+        padding: 0;    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }   
 
-.attribution a { color: hsl(228, 45%, 44%); }
+    .container{         
+        display: flex;   
+        flex-flow: row wrap;
+        width:35%;        
+    }
+
+    /*Upper section*/
+
+    .intro{
+        flex: 2 1 auto;
+        padding: 2.5rem;
+        
+    }
+
+    .intro > h1 {
+        font-size: 1.6rem;
+    }
+
+    .intro > h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    /* Lower sections common styles*/      
+
+    .pricing, .why{
+        width: 25%;
+        flex: 1 1 auto;
+        padding: 2.5rem;        
+    }
+
+    /*Lower sections individual styles*/
+
+    .pricing{
+        border-radius: 0 0 0 0.3rem;
+    }
+
+    .pricing > p {      
+        margin: 0.7rem 0 1.9rem;
+    }
+
+    .why {
+        border-radius: 0 0 0.3rem 0;
+    }
+
+    .why > ul {
+        margin: 0;
+        font-size: 0.9rem
+    }
+
+    footer {        
+        flex: 1 1 auto;
+    }
+   
+}
