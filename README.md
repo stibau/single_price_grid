@@ -43,12 +43,14 @@ M%obile Layout
 
 - Semantic HTML5 markup
 - CSS custom properties
+- Grid
 - Flexbox
 - Mobile-first workflow
 
 ### Useful resources
 
 - [css button generator](https://css3buttongenerator.com/)
+- [Good grid tutorial](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Good flexbox tutorial](https://css-tricks.com/snippets/css/a-guide-to-flexbox)
 - [Google fonts](https://fonts.google.com/)
 

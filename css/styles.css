@@ -1,201 +1,250 @@
-* {
-    margin: 0;   
+/* Ssome global variables */
+:root{
+    --white: hsl(0, 0%, 100%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --cyan: hsl(179, 62%, 43%);
+    --light-gray:hsl(204, 43%, 93%);
+    --light-cyan:hsl(179, 47%, 52%); 
+    --lightest-cyan: hsl(179, 47%, 85%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --blueish-gray: hsl(228, 45%, 44%);
+    --darker-cyan: hsl(179, 47%, 40%);
 }
 
-body, button {
-    font-family: 'Karla', sans-serif; 
+/* Global elements: set some global parameter values */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;    
 }
 
-main {
-    background-color: hsl(204, 43%, 93%);
-    padding: 4rem 1.7rem;
+html{
+    height: 100%;
 }
 
-.container{
-    box-shadow: 0 0 0.5rem 0.05rem hsl(0, 0%, 85%);    
+/*The body element is a grid that is composed of the main element and a footer.  */
+
+body{
+    height: 100%;
+    background-color: var(--light-gray);
+    display: grid;
+    grid-template-columns: 9fr 82fr 9fr;
+    grid-template-rows: 8.5fr 83fr 6.5fr 2fr;
 }
 
-/* Upper section styles */
+/* main is a grid into which we fit each of the three divs that make up the single price component. */
+/* These are sections intro, price and why */
 
-.intro {
-    background-color: hsl(0, 0%, 100%);    
-    border-radius: 0.3rem 0.3rem 0 0;
-    padding: 2rem 1.6rem;
+main{
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 37fr 31.5fr 31.5fr;
+}
+
+/* intro styling */
+
+.intro{
+    background-color: var(--white);
+    padding: 1.4rem 1.4rem;
 }
 
 .intro > h1 {
     font-size: 1.2rem;
     font-weight: 700;
-    color: hsl(179, 62%, 43%);
+    color: var(--cyan);
+    margin-bottom: 1rem; 
 }
 
 .intro > h2 {
     font-size: 0.9rem;
     font-weight: 700;
-    color: hsl(71, 73%, 54%);
-    margin: 1.5rem 0;
+    color: var(--bright-yellow); 
+    margin-bottom: 1rem;
 }
 
 .intro > p {
     font-size: 0.85rem;
     font-weight: 400;
-    color: hsl(218, 22%, 75%);
-    line-height: 1.75;
+    color: var(--grayish-blue);
+    line-height: 1.5rem;    
 }
 
-/* Middle and Lower section common styles */
+/* price styling */
 
-.pricing, .why{
-    padding: 1.6rem 1.6rem;
+.price {
+    background-color: var(--cyan);
+    color: var(--white);
+    padding: 1.4rem 1.4rem;
 }
 
-.pricing > h1, .why > h1 {
-    font-size: 1.15rem;
-    font-weight: 700; 
-    color: hsl(0, 0%, 100%); 
-    margin-bottom: 1rem; 
+.price > h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
 }
 
-/* Middle Section */
-
-.pricing, .pricing > mark{
-    background-color: hsl(179, 62%, 43%);
-}
-
-.pricing > mark {
+.pricing1 {
     font-size:2rem;
-    font-weight: 700;
-    color:hsl(0, 0%, 100%);    
-    vertical-align: middle;     
+    font-weight: 700;  
+    vertical-align: middle; 
+    background-color: var(--cyan);
+    color: var(--white);    
+    margin-bottom: 0.2rem;
 }
 
-.pricing > span {
+.pricing1 > span {
     font-size: 1rem;
     font-weight: 400;
-    color: hsl(179, 47%, 70%);  
-    margin: 0 0.6rem;     
+    opacity: 0.5;
+    padding: 1rem;    
+    vertical-align: middle;
 }
 
-.pricing > p {
+.pricing2 {
     font-size: 1rem;
     font-weight: 400;
-    color:hsl(179, 47%, 85%);
-    margin: 1rem 0 1.5rem;
+    color: var(--white);
+    opacity: 0.7;
+    margin-bottom: 1.25rem;
 }
 
-.pricing > button {
-    -webkit-border-radius: 5;
-    -moz-border-radius: 5;
+.price > button {    
     border-radius: 5px;
-    color: hsl(0, 0%, 100%); ;
+    color: var(--white);
     font-size: 1rem;
-    background:  hsl(71, 73%, 54%);
+    background:  var(--bright-yellow);
     text-decoration: none;
     border: none;  
     width: 100%;
+    margin: auto;
     padding: 1rem; 
-    box-shadow: 0 0 0.5rem 0.05rem hsl(179, 47%, 40%);    
+    box-shadow: 0 0 0.5rem 0.05rem var(--darker-cyan);
     cursor: pointer;
 }
 
-.pricing button:hover{
-    background: hsl(71, 87%, 44%);
-}
+/* why styling */
 
-/* Lower Section */
+.why {
+    background-color: var(--light-cyan);
+    color: var(--white);
+    padding: 1.4rem 1.4rem;  
+} 
 
-.why{
-    background-color: hsl(179, 47%, 52%);
-    border-radius: 0 0 0.3rem 0.3rem;
+.why > h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
 }
 
 .why > ul {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-    color: hsl(179, 47%, 85%);
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-    font-size:1rem
+    list-style-type: none;
+    opacity: 0.5;     
+    line-height: 1.15rem;
 }
+
+.why > ul > li {
+    font-size: 0.8rem;
+}
+
+/* Footer styles: footer is a flexbox: this makes it easier to center its content both horizontally and vertically */
 
 footer{
-    text-align: center;
-    font-size: 0.75rem;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    background-color:var(--white);
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (min-width: 950px)
-{   
-    body{
-        height: 100vh;
-        display:flex;
-        flex-flow: column wrap;
-    }
-
-    main { 
-        flex: 90 1 auto; 
-        padding: 0;    
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }   
-
-    .container{         
-        display: flex;   
-        flex-flow: row wrap;
-        width:35%;        
-    }
-
-    /*Upper section*/
-
-    .intro{
-        flex: 2 1 auto;
-        padding: 2.5rem;
-        
-    }
-
-    .intro > h1 {
-        font-size: 1.6rem;
-    }
-
-    .intro > h2 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .intro p {
-        font-size: 1rem;
-    }
-
-    /* Lower sections common styles*/      
-
-    .pricing, .why{
-        width: 25%;
-        flex: 1 1 auto;
-        padding: 2.5rem;        
-    }
-
-    /*Lower sections individual styles*/
-
-    .pricing{
-        border-radius: 0 0 0 0.3rem;
-    }
-
-    .pricing > p {      
-        margin: 0.7rem 0 1.9rem;
-    }
-
-    .why {
-        border-radius: 0 0 0.3rem 0;
-    }
-
-    .why > ul {
-        margin: 0;
-        font-size: 0.9rem
-    }
-
-    footer {        
-        flex: 1 1 auto;
-    }
-   
+.attribution{
+    font-size: 0.7rem;
 }
+
+.attribution a {
+    color: var(--blueish-gray);
+} 
+
+
+
+/* body{
+    height: 100%;
+    background-color: hsl(204, 43%, 93%);
+    display: grid;
+    grid-template-columns: 28fr 44fr 28fr;
+    grid-template-rows: 20.15fr 55.7fr 20.15fr 4fr;
+} */
+
+/* Main styles: main is a grid into which we fit each of the three divs that make up the single price component. */
+/* those are divs intro, price and why */
+
+/* main{
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-rows: 45fr 55fr;
+} */
+
+/* intro styling */
+
+/* .intro{
+    grid-column: 1 / span 2;
+    background-color: hsl(0, 0%, 100%);
+} */
+
+/* .intro > h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: hsl(179, 62%, 43%);
+} */
+
+/* .intro > h2 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+    margin: 1.5rem 0;
+} */
+
+/* .intro > p {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: hsl(218, 22%, 75%);
+    line-height: 1.75;
+} */
+
+/* price Styling */
+
+/* .price{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: hsl(179, 62%, 43%);
+} */
+
+/* .why{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: hsl(179, 47%, 52%);
+} */
+
+/* Footer styles: footer cons */
+
+/* footer{
+    grid-column: 1 / span 3;
+    grid-row: 5;
+    background-color: hsl(0,0%,100%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .attribution{
+    font-size: 0.7rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+} */
