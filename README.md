@@ -28,7 +28,7 @@ Deskop Layout
 
 ![](./Solution_desktop.png)
 
-M%obile Layout
+Mobile Layout
 
 ![](./Solution_mobile.png)
 
